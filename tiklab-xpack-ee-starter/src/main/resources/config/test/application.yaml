@@ -42,6 +42,9 @@ eas:
   embbed:
     enable: true
 
+base:
+  url: "http://eas-ee.test.tiklab.net"
+
 #dfs config
 #dfs.server.enabled=false
 dfs:
@@ -92,4 +95,4 @@ file:
 repository:
   library: ${user.home}
   code: xpack
-  address: "http://bac.xpack.test.tiklab.net"
+  address: "http://xpack-ee.test.tiklab.net"

@@ -26,10 +26,10 @@ DATA_HOME: ${user.home}/tiklab/${app.name}
 eas:
   embbed:
     enable: false
-  address: http://bac.eas.demo.tiklab.net
+  address: http://eas-ee.demo.tiklab.net
 
 base:
-  url: http://bac.eas.demo.tiklab.net
+  url: http://eas-ee.demo.tiklab.net
 #dfs config
 #dfs.server.enabled=false
 dfs:
@@ -80,4 +80,4 @@ file:
 repository:
   library: ${user.home}
   code: xpack
-  address: "http://bac.xpack.demo.tiklab.net"
+  address: "http://xpack-ee.demo.tiklab.net"
