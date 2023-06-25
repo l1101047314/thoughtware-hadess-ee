@@ -1,6 +1,6 @@
-package net.tiklab.xapck;
+package io.tiklab.xpack.ee;
 
-import net.tiklab.utils.property.PropertyAndYamlSourceFactory;
+import io.tiklab.core.property.PropertyAndYamlSourceFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;

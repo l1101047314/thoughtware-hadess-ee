@@ -1,47 +1,39 @@
-package net.tiklab.xapck.config;
+package io.tiklab.xpack.ee.config;
 
 
-import net.tiklab.eam.author.Authenticator;
-import net.tiklab.eam.client.author.AuthorHandler;
-import net.tiklab.eam.client.author.config.IgnoreConfig;
-import net.tiklab.eam.client.author.config.IgnoreConfigBuilder;
-import net.tiklab.gateway.GatewayFilter;
-import net.tiklab.gateway.router.RouterHandler;
-import net.tiklab.gateway.router.config.RouterConfig;
-import net.tiklab.gateway.router.config.RouterConfigBuilder;
+import io.tiklab.eam.author.Authenticator;
+import io.tiklab.eam.client.author.config.AuthorConfig;
+import io.tiklab.eam.client.author.config.AuthorConfigBuilder;
+import io.tiklab.eam.client.author.filter.AuthorFilter;
+import io.tiklab.gateway.router.Router;
+import io.tiklab.gateway.router.RouterBuilder;
+import io.tiklab.gateway.router.config.RouterConfig;
+import io.tiklab.gateway.router.config.RouterConfigBuilder;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
 
 @Configuration
 public class GatewayFilterAutoConfiguration {
 
 
     @Bean
-    GatewayFilter gatewayFilter(RouterHandler routerHandler, AuthorHandler authorHandler){
-        return new GatewayFilter()
-                .setRouterHandler(routerHandler)
-                .addHandler(authorHandler);
+    Router router(RouterConfig routerConfig){
+        return RouterBuilder.newRouter(routerConfig);
     }
 
-    //认证handler
+    //认证filter
     @Bean
-    AuthorHandler authorHandler(Authenticator authenticator, IgnoreConfig ignoreConfig){
-        return new AuthorHandler()
+    AuthorFilter authorFilter(Authenticator authenticator, AuthorConfig ignoreConfig){
+        return new AuthorFilter()
                 .setAuthenticator(authenticator)
-                .setIgnoreConfig(ignoreConfig);
-
+                .setAuthorConfig(ignoreConfig);
     }
 
     @Bean
-    RouterHandler routerHandler(RouterConfig routerConfig){
-        return new RouterHandler()
-                .setRouterConfig(routerConfig);
-    }
-
-    @Bean
-    public IgnoreConfig ignoreConfig(){
-        return IgnoreConfigBuilder.instance()
+    public AuthorConfig authorConfig(){
+        return AuthorConfigBuilder.instance()
                 .ignoreTypes(new String[]{
                         ".ico",
                         ".jpg",
@@ -59,6 +51,16 @@ public class GatewayFilterAutoConfiguration {
                         "/",
                         "/note/vaildSmsCode",
                         "/note/sendSmsCode",
+                        "/passport/member/login",
+                        "/subscribe/findSubscribePrice",
+                        "/wechatCallback/data",
+                        "/wechatCallback/instruct",
+                        "/wechatCallback/getUserinfo3rd",
+                        "/wechatapplication/getTenant",
+                        "/wechatapplication/create",
+                        "/wechatapplication/syncdata",
+                        "/wechatapplication/vaildTentant",
+
                         "/dfs/upload",
                         "/uploadFile/ftpUpload",
 
@@ -67,9 +69,9 @@ public class GatewayFilterAutoConfiguration {
                         "/message/messageSendType/createMessageSendType",
                         "/message/messageTemplate/findMessageTemplateList",
                         "/passport/member/authCodeLogin",
-                        "/passport/member/logout",
-                        "/passport/member/valid",
                         "/passport/ent/user/login",
+                        "/passport/person/wechat/findUserinfo",
+                        "/passport/person/dingding/findUserinfo",
                         "/visit/addVisit",
                         "/ram/passport/login",
                         "/passport/login",
@@ -82,6 +84,11 @@ public class GatewayFilterAutoConfiguration {
                         "/sockjs-node/info",
                         "/eam/auth/login",
                         "/libraryFile/tag",
+                        "/repositoryRemoteProxy/test",
+                        "/repository/findAllRepository",
+                        "/version/getVersion",
+                        "/licence/import",
+                        "/alterSql/updateId",
 
                 })
                 .ignorePreUrls(new String[]{
@@ -93,9 +100,9 @@ public class GatewayFilterAutoConfiguration {
                         "/plugin",
                         "/authConfig",
                         "/services",
-                        "/repository",
+                        "/xpack",
                         "/library",
-
+                        "/repository"
 
                 })
                 .get();
@@ -115,13 +122,23 @@ public class GatewayFilterAutoConfiguration {
     @Bean
     RouterConfig routerConfig(){
         String[] s = {
-               /* "/user",
-                "/message",
-                "/oplog",*/
-                "/todo"
+                "/user",
+                "/eam",
+                "/appLink",
+                "/todo/deletetodo",
+                "/todo/updatetodo",
+                "/todo/detailtodo",
+                "/todo/findtodopage",
+                "/message/message",
+                "/message/messageItem",
+                "/message/messageReceiver",
+                "/oplog/deletelog",
+                "/oplog/updatelog",
+                "/oplog/detaillog",
+                "/oplog/findlogpage",
         };
 
-        if (!enableEam){
+        if (enableEam){
 
             s = new String[]{};
         }
@@ -130,4 +147,5 @@ public class GatewayFilterAutoConfiguration {
                 .preRoute(s, authUrl)
                 .get();
     }
+
 }

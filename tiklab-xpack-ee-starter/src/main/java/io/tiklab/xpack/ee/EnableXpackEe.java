@@ -1,4 +1,4 @@
-package net.tiklab.xapck;
+package io.tiklab.xpack.ee;
 
 import org.springframework.context.annotation.Import;
 

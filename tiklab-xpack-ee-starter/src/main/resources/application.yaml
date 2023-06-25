@@ -2,22 +2,30 @@
 app:
   name: tiklab-xpack-ee
   path: ${APP_HOME}
+  version: ee
 
 spring:
   config:
     import: optional:classpath:/config/${env:dev}/application.yaml
 #web config
 server:
-  port: 8084
+  port: 8081
 
 #dal config
 
 #dal config for mysql jdbc
 jdbc:
-  driverClassName: com.mysql.cj.jdbc.Driver
-  url: jdbc:mysql://172.27.46.219:3306/tiklab_xpack?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
-  username: root
+  driverClassName: org.postgresql.Driver
+  url: jdbc:postgresql://172.13.1.13:5432/tiklab_xpack_ee?stringtype=unspecified
+  username: postgres
   password: darth2020
+
+
+postgresql:
+  embbed:
+    enable: true
+  database: tiklab_xpack_ee
+
 
 DATA_HOME: ${user.home}/tiklab/${app.name}
 
@@ -43,39 +51,31 @@ dss:
     url: 101.132.162.74:6000
     bucket: ${app.name}
 
-#enable mysql
-mysql:
-  embbed:
-    enable: false
-  server:
-    port: 3306
-  database: tiklab_xpack
 
 #eas config
 eas:
   embbed:
-    enable: true
-
-
+    enable: false
+  address: http://bac.eas.tiklab.net
 
 
 #plugin config
 plugin.path: ${APP_HOME}/plugin
 
-#rpc
-ocs:
-  address: http://139.196.76.221:8080
-
 
 homes:
   address: http://139.196.76.221:8080
-  return:
-    path: ''
+
 
 #licences config
 licences:
   path: ${DATA_HOME}/data/dfs/default
 
+#file
+file:
+  path: http://file.tiklab.net
 
 repository:
   library: ${user.home}
+  code: xpack
+  address: ""

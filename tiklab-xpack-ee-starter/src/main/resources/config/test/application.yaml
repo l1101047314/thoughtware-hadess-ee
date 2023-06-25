@@ -2,35 +2,33 @@
 app:
   name: tiklab-xpack-ee
   path: ${APP_HOME}
+  version: ee
+
 spring:
   profiles:
     active: test
 
 #web config
 server:
-  port: 8084
+  port: 8081
 
 #dal config
 
 #dal config for mysql jdbc
 jdbc:
-  driverClassName: com.mysql.cj.jdbc.Driver
-  url: jdbc:mysql://172.11.1.10:3306/tiklab_xpack?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
-  username: root
+  driverClassName: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/tiklab_xpack_ee?stringtype=unspecified
+  username: postgres
   password: darth2020
+
+
+postgresql:
+  embbed:
+    enable: true
+  database: tiklab_xpack_ee
 
 DATA_HOME: ${user.home}/tiklab/${app.name}
 
-
-#enable mysql
-mysql:
-  embbed:
-    enable: false
-  database: tiklab_xcode
-  server:
-    port: 3306
-  version: mysql-8.0.28
-  name: tiklab_oms
 
 #eas config
 #eas:
@@ -70,14 +68,8 @@ dss:
 plugin.path: ${APP_HOME}/plugin
 
 #rpc
-ocs:
-  address: http://172.11.1.11:8080
-
-
 homes:
   address: http://172.11.1.11:8080
-  return:
-    path: ''
 
 #licences config
 licences:
@@ -93,6 +85,11 @@ template:
   shell:
     path: ${APP_HOME}/script/create_db_local_02.sh
 
+#file
+file:
+  path: http://file.dev.tiklab.net
+
 repository:
   library: ${user.home}
-  url: http://172.12.1.11:8081/repository/maven
+  code: xpack
+  address: "http://bac.xpack.test.tiklab.net"
