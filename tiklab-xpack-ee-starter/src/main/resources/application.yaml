@@ -9,7 +9,7 @@ spring:
     import: optional:classpath:/config/${env:dev}/application.yaml
 #web config
 server:
-  port: 8080
+  port: 8081
 
 #dal config
 
