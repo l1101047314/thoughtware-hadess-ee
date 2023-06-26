@@ -390,6 +390,8 @@
                 </executions>
             </plugin>
 
+            <!--copy插件-->
+
         </plugins>
     </build>
 

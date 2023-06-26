@@ -26,6 +26,8 @@ postgresql:
   embbed:
     enable: true
   database: tiklab_xpack_ee
+  server:
+    port: 5010
 
 DATA_HOME: ${user.home}/tiklab/${app.name}
 
