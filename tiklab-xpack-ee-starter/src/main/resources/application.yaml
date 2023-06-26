@@ -23,7 +23,7 @@ jdbc:
 
 postgresql:
   embbed:
-    enable: fales
+    enable: false
   database: tiklab_xpack_ee
 
 
