@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/../tiklab-xcode-ee/tiklab-xcode-ee.iml" filepath="$PROJECT_DIR$/../tiklab-xcode-ee/tiklab-xcode-ee.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tiklab-xpack-ee.iml" filepath="$PROJECT_DIR$/tiklab-xpack-ee.iml" />
-    </modules>
-  </component>
-</project>

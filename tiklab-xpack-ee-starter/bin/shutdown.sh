@@ -9,7 +9,7 @@ if [ -e "${DIRS}/${JDK_VERSION}" ]; then
 fi
 
 #APP_MAIN=${application.main.class}
-APP_MAIN="io.tiklab.xpack.ee.XpackEeApplication"
+APP_MAIN="io.tiklab.xpack.starter.XpackEeApplication"
 
 PID=0
 getPID(){

@@ -2,7 +2,7 @@
 #-------------------------------------------------------------------------------------------------------------
 DIRS=$(dirname "$PWD")
 
-APP_MAIN="io.tiklab.xpack.ee.XpackEeApplication"
+APP_MAIN="io.tiklab.xpack.starter.XpackEeApplication"
 JAVA_HOME="/usr/local/jdk-17.0.7"
 
 JDK_VERSION=jdk-17.0.7
