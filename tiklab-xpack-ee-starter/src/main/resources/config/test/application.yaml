@@ -26,8 +26,11 @@ postgresql:
   embbed:
     enable: true
   database: xpack_ee
-  server:
+  db:
     port: 5433
+    username: postgres
+    password: darth2020
+    address: ${DATA_HOME}/postgresql
 eas:
   embbed:
     enable: true
