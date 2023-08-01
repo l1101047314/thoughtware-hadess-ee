@@ -16,7 +16,7 @@ server:
 #dal config for mysql jdbc
 jdbc:
   driverClassName: org.postgresql.Driver
-  url: jdbc:postgresql://localhost:5432/xpack_ee?stringtype=unspecified
+  url: jdbc:postgresql://localhost:5433/xpack_ee?stringtype=unspecified
   username: postgres
   password: darth2020
 
@@ -26,7 +26,7 @@ postgresql:
     enable: true
   database: xpack_ee
   db:
-    port: 5432
+    port: 5433
     username: postgres
     password: darth2020
     address: ${DATA_HOME}/postgresql
