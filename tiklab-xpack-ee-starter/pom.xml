@@ -300,6 +300,12 @@
                 <yaml-type>/config/demo</yaml-type>
             </properties>
         </profile>
+        <profile>
+            <id>env-prd</id>
+            <properties>
+                <yaml-type>/config/prd</yaml-type>
+            </properties>
+        </profile>
 
         <!--release-->
         <profile>
