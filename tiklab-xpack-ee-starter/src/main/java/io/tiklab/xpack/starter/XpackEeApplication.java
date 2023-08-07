@@ -21,6 +21,7 @@ public class XpackEeApplication {
     public static final Logger logger = LoggerFactory.getLogger(XpackEeApplication.class);
 
     public static void main(String[] args) {
+        System.setProperty("org.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH","true");
         SpringApplication.run(XpackEeApplication.class, args);
     }
 
