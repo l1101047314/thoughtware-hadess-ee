@@ -101,3 +101,37 @@ startup(){
 
 startup
 
+APPLY=xpack
+
+enableApply(){
+
+    APPLYDIR="$PWD"
+
+    serverName=enable-${APPLY}.service
+
+    applyserver=/etc/systemd/system/${serverName}
+
+    if [ -e "${applyserver}" ]; then
+           touch ${applyserver};chmod 644 ${applyserver};systemctl enable ${serverName}
+        fi
+
+cat << EOF >  ${applyserver}
+[Unit]
+Description=Custom Startup Script
+
+[Service]
+EOF
+
+echo Environment=\"DIR=${APPLYDIR}\" >> ${applyserver}
+
+cat << EOF >> ${applyserver}
+ExecStart=/bin/bash -c 'cd "\$DIR"; sh startup.sh'
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+}
+
+enableApply
