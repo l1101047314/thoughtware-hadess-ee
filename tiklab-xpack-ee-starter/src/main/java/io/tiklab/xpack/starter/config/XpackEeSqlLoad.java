@@ -34,8 +34,18 @@ public class XpackEeSqlLoad {
 
         });
         dsmConfig.newVersion("1.0.1", new String[]{
+                //xpack
                 "xpack_1.0.1",
 
+        });
+        dsmConfig.newVersion("1.0.2", new String[]{
+                //xpack
+                "xpack_1.0.2",
+
+        });
+        dsmConfig.newVersion("1.0.3", new String[]{
+                //xpack
+                "xpack_1.0.3",
         });
         return dsmConfig;
     }

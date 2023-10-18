@@ -100,7 +100,14 @@ public class GatewayFilterAutoConfiguration {
                         "/authConfig",
                         "/services",
                         "/library",
-                        "/repository"
+                        "/repository",
+                        "/generic",
+                        "/pushCenWarehouse",
+                        "/libraryFile",
+                        "/xpack",
+                        "/backups",
+                        "/scan",
+                        "/v2"
 
                 })
                 .get();

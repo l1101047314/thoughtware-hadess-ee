@@ -91,3 +91,8 @@ file:
 
 repository:
   address: ${DATA_HOME}/repository
+
+openscan_mvn:
+  repo: http://172.13.1.24:8080/repository/maven-public
+  user: admin
+  password: 123456

@@ -17,8 +17,8 @@ server:
 #dal config for mysql jdbc
 jdbc:
   driverClassName: org.postgresql.Driver
-  #url: jdbc:postgresql://172.10.1.10:5432/tiklab_xpack_ee?currentSchema=public&stringtype=unspecified
-  url: jdbc:postgresql://172.13.1.24:5432/xpack_ee?stringtype=unspecified
+  url: jdbc:postgresql://172.10.1.10:5432/tiklab_xpack_ee?currentSchema=public&stringtype=unspecified
+  #url: jdbc:postgresql://172.13.1.24:5432/xpack_ee?stringtype=unspecified
   username: postgres
   password: darth2020
 
@@ -27,6 +27,7 @@ postgresql:
   embbed:
     enable: false
   database: tiklab_xpack_ee
+  type: local
 
 DATA_HOME: ${user.home}/tiklab/${app.name}
 
@@ -92,3 +93,16 @@ file:
 
 repository:
   address: ${DATA_HOME}/repository
+
+backup:
+  address: ${DATA_HOME}/backup
+  time: 0 0 2 * * ?
+
+backups:
+  dir: /data/xcode
+  time: 0 0 2 * * ?
+
+openscan_mvn:
+  repo: http://172.13.1.24:8080/repository/maven-public
+  user: admin
+  password: 123456

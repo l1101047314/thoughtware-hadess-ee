@@ -109,6 +109,13 @@
                     <type>zip</type>
                     <scope>provided</scope>
                 </dependency>
+                <dependency>
+                    <groupId>io.tiklab</groupId>
+                    <artifactId>tiklab-opensca-linux</artifactId>
+                    <version>${tiklab-opensca.version}</version>
+                    <type>zip</type>
+                    <scope>provided</scope>
+                </dependency>
             </dependencies>
             <properties>
                 <assembly>linux</assembly>
@@ -143,6 +150,13 @@
                                             <type>zip</type>
                                             <outputDirectory>embbed</outputDirectory>
                                         </artifactItem>
+                                        <artifactItem>
+                                            <groupId>io.tiklab</groupId>
+                                            <artifactId>tiklab-opensca-linux</artifactId>
+                                            <version>${tiklab-opensca.version}</version>
+                                            <type>zip</type>
+                                            <outputDirectory>embbed</outputDirectory>
+                                        </artifactItem>
                                     </artifactItems>
                                 </configuration>
                             </execution>
@@ -160,6 +174,13 @@
                     <groupId>io.tiklab</groupId>
                     <artifactId>tiklab-jdk-windows</artifactId>
                     <version>${project.version}</version>
+                    <type>zip</type>
+                    <scope>provided</scope>
+                </dependency>
+                <dependency>
+                    <groupId>io.tiklab</groupId>
+                    <artifactId>tiklab-opensca-windows</artifactId>
+                    <version>${tiklab-opensca.version}</version>
                     <type>zip</type>
                     <scope>provided</scope>
                 </dependency>
@@ -192,8 +213,15 @@
                                         </artifactItem>
                                         <artifactItem>
                                             <groupId>io.tiklab</groupId>
-                                            <artifactId>tiklab-postgresql-linux</artifactId>
+                                            <artifactId>tiklab-postgresql-windows</artifactId>
                                             <version>${project.version}</version>
+                                            <type>zip</type>
+                                            <outputDirectory>embbed</outputDirectory>
+                                        </artifactItem>
+                                        <artifactItem>
+                                            <groupId>io.tiklab</groupId>
+                                            <artifactId>tiklab-opensca-windows</artifactId>
+                                            <version>${tiklab-opensca.version}</version>
                                             <type>zip</type>
                                             <outputDirectory>embbed</outputDirectory>
                                         </artifactItem>
@@ -219,8 +247,8 @@
                 </dependency>
                 <dependency>
                     <groupId>io.tiklab</groupId>
-                    <artifactId>tiklab-jdk-mac</artifactId>
-                    <version>${project.version}</version>
+                    <artifactId>tiklab-opensca-mac</artifactId>
+                    <version>${tiklab-opensca.version}</version>
                     <type>zip</type>
                     <scope>provided</scope>
                 </dependency>
@@ -253,8 +281,15 @@
                                         </artifactItem>
                                         <artifactItem>
                                             <groupId>io.tiklab</groupId>
-                                            <artifactId>tiklab-postgresql-linux</artifactId>
+                                            <artifactId>tiklab-postgresql-mac</artifactId>
                                             <version>${project.version}</version>
+                                            <type>zip</type>
+                                            <outputDirectory>embbed</outputDirectory>
+                                        </artifactItem>
+                                        <artifactItem>
+                                            <groupId>io.tiklab</groupId>
+                                            <artifactId>tiklab-opensca-mac</artifactId>
+                                            <version>${tiklab-opensca.version}</version>
                                             <type>zip</type>
                                             <outputDirectory>embbed</outputDirectory>
                                         </artifactItem>
