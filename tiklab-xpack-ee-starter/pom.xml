@@ -379,7 +379,7 @@
                             <descriptors>
                                 <descriptor>assembly/distribution-${assembly}.xml</descriptor>
                             </descriptors>
-                            <finalName>tiklab-xpack-${version}-${timestamp}</finalName>
+                            <finalName>tiklab-xpack-ee-${version}-${timestamp}</finalName>
                             <appendAssemblyId>false</appendAssemblyId>
                         </configuration>
                         <phase>package</phase>
