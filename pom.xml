@@ -6,45 +6,45 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>io.tiklab</groupId>
-        <artifactId>tiklab-dependencies</artifactId>
+        <groupId>io.thoughtware</groupId>
+        <artifactId>thoughtware-dependencies</artifactId>
         <version>1.0.0</version>
     </parent>
-    <groupId>io.tiklab</groupId>
-    <artifactId>tiklab-xpack-ee</artifactId>
+    <groupId>io.thoughtware</groupId>
+    <artifactId>thoughtware-hadess-ee</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <properties>
-        <tiklab-core.version>1.0.0</tiklab-core.version>
-        <tiklab-codegen.version>1.0.0</tiklab-codegen.version>
-        <tiklab-toolkit.version>1.0.0</tiklab-toolkit.version>
-        <tiklab-plugin.version>1.0.0</tiklab-plugin.version>
-        <tiklab-gateway.version>1.0.0</tiklab-gateway.version>
-        <tiklab-rpc.version>1.0.0</tiklab-rpc.version>
-        <tiklab-dfs.version>1.0.0</tiklab-dfs.version>
-        <tiklab-dss.version>1.0.0</tiklab-dss.version>
-        <tiklab-dcs.version>1.0.0</tiklab-dcs.version>
-        <tiklab-integration.version>1.0.0</tiklab-integration.version>
-        <tiklab-dal.version>1.0.0</tiklab-dal.version>
-        <tiklab-join.version>1.0.0</tiklab-join.version>
+        <thoughtware-core.version>1.0.0</thoughtware-core.version>
+        <thoughtware-codegen.version>1.0.0</thoughtware-codegen.version>
+        <thoughtware-toolkit.version>1.0.0</thoughtware-toolkit.version>
+        <thoughtware-plugin.version>1.0.1-SNAPSHOT</thoughtware-plugin.version>
+        <thoughtware-gateway.version>1.0.1-SNAPSHOT</thoughtware-gateway.version>
+        <thoughtware-rpc.version>1.0.0</thoughtware-rpc.version>
+        <thoughtware-dfs.version>1.0.0</thoughtware-dfs.version>
+        <thoughtware-dss.version>1.0.0</thoughtware-dss.version>
+        <thoughtware-dcs.version>1.0.0</thoughtware-dcs.version>
+        <thoughtware-dal.version>1.0.0</thoughtware-dal.version>
+        <thoughtware-join.version>1.0.0</thoughtware-join.version>
+        <thoughtware-openapi-version>1.0.0-SNAPSHOT</thoughtware-openapi-version>
 
         <!--平台组件-->
-        <tiklab-privilege.version>1.0.0</tiklab-privilege.version>
-        <tiklab-licence.version>1.0.0</tiklab-licence.version>
-        <tiklab-user.version>1.0.0</tiklab-user.version>
-        <tiklab-security.version>1.0.0</tiklab-security.version>
-        <tiklab-message.version>1.0.0</tiklab-message.version>
-        <tiklab-todotask.version>1.0.0</tiklab-todotask.version>
-        <tiklab-eam.version>1.0.0</tiklab-eam.version>
-        <tiklab-postgresql.version>1.0.0</tiklab-postgresql.version>
+        <thoughtware-privilege.version>1.0.1-SNAPSHOT</thoughtware-privilege.version>
+        <thoughtware-licence.version>1.0.1-SNAPSHOT</thoughtware-licence.version>
+        <thoughtware-user.version>1.0.1-SNAPSHOT</thoughtware-user.version>
+        <thoughtware-security.version>1.0.1-SNAPSHOT</thoughtware-security.version>
+        <thoughtware-message.version>1.0.1-SNAPSHOT</thoughtware-message.version>
+        <thoughtware-todotask.version>1.0.1-SNAPSHOT</thoughtware-todotask.version>
+        <thoughtware-eam.version>1.0.1-SNAPSHOT</thoughtware-eam.version>
+        <thoughtware-postgresql.version>1.0.1-SNAPSHOT</thoughtware-postgresql.version>
 
-        <!--tiklab-->
-        <tiklab-postin.version>1.0.0</tiklab-postin.version>
-        <tiklab-upgrade.version>1.0.0</tiklab-upgrade.version>
-        <tiklab-jdk.version>1.0.0</tiklab-jdk.version>
-        <tiklab-opensca.version>1.0.0</tiklab-opensca.version>
+        <!--thoughtware-->
+        <thoughtware-postin.version>1.0.0</thoughtware-postin.version>
+        <thoughtware-upgrade.version>1.0.0</thoughtware-upgrade.version>
+        <thoughtware-jdk.version>1.0.0</thoughtware-jdk.version>
+        <thoughtware-opensca.version>1.0.0</thoughtware-opensca.version>
         <!--other-->
         <jdbc-mapper.version>1.2.2</jdbc-mapper.version>
         <commons-net.version>3.5</commons-net.version>
@@ -52,10 +52,27 @@
     </properties>
 
     <modules>
-        <module>tiklab-xpack-ee-starter</module>
+        <module>thoughtware-hadess-ee-starter</module>
     </modules>
 
-
+    <profiles>
+        <profile>
+            <id>deploy-hadess</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>hadess</id>
+                    <url>http://192.168.10.17:8081/repository/maven-snapshot</url>
+                </snapshotRepository>
+                <repository>
+                    <id>hadess</id>
+                    <url>http://192.168.10.17:8081/repository/maven-release</url>
+                </repository>
+            </distributionManagement>
+            <properties>
+                <profile.assembly.package.suffix>deploy-hadess</profile.assembly.package.suffix>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>
 
