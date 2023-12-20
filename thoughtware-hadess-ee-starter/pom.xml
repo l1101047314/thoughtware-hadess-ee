@@ -96,6 +96,18 @@
             <artifactId>thoughtware-openapi-spring-boot-starter</artifactId>
             <version>${thoughtware-openapi-version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.thoughtware</groupId>
+            <artifactId>thoughtware-user-spring-boot-starter</artifactId>
+            <version>${thoughtware-user.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.thoughtware</groupId>
+            <artifactId>thoughtware-message-spring-boot-starter</artifactId>
+            <version>${thoughtware-message.version}</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 

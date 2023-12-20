@@ -35,9 +35,12 @@ postgresql:
 darth:
   embbed:
     enable: false
-  address: http://e.darth.thoughtware.net
+  address: http://e.darth.thoughtware.cn
 
 DATA_HOME: /opt/tiklab/xpack_ee
+
+base:
+  url: http://e.hadess.thoughtware.cn
 
 #dfs config
 dfs:

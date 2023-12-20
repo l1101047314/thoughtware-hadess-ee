@@ -33,36 +33,27 @@ public class HadessEeSqlLoad {
                 //xpack
                 "xpack_1.0.0",
                 "xprivilege_1.0.0",
-
-
         });
         dsmConfig.newVersion("1.0.1", new String[]{
                 //xpack
                 "xpack_1.0.1",
+        });
+        dsmConfig.newVersion("1.0.1", new String[]{
+                "xpack_1.0.1",
+                "oplog_1.0.1",
+                "message_1.0.1",
+                "todotask_1.0.1",
                 "xprivilege_1.0.1",
 
         });
         dsmConfig.newVersion("1.0.2", new String[]{
-                //xpack
                 "xpack_1.0.2",
-
+                "message_1.0.2",
+                "oplog_1.0.2"
         });
         dsmConfig.newVersion("1.0.3", new String[]{
-                //xpack
                 "xpack_1.0.3",
-        });
-        dsmConfig.newVersion("1.0.4", new String[]{
-                //xpack
-                "xpack_1.0.4",
-        });
-        dsmConfig.newVersion("1.0.5", new String[]{
-                "xpack_1.0.5",
-        });
-        dsmConfig.newVersion("1.0.6", new String[]{
-                "xpack_1.0.6",
-        });
-        dsmConfig.newVersion("1.0.7", new String[]{
-                "xpack_1.0.7",
+                "message_1.0.3"
         });
         return dsmConfig;
     }
