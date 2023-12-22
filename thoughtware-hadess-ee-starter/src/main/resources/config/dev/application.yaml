@@ -37,7 +37,7 @@ darth:
   embbed:
     enable: true
 base:
-  url: http://192.168.10.17:8081
+  url: http://192.168.10.9:8081
 
 
 #dfs config
