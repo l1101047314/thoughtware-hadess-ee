@@ -102,11 +102,17 @@
             <artifactId>thoughtware-user-spring-boot-starter</artifactId>
             <version>${thoughtware-user.version}</version>
         </dependency>
+
         <dependency>
             <groupId>io.thoughtware</groupId>
             <artifactId>thoughtware-message-spring-boot-starter</artifactId>
             <version>${thoughtware-message.version}</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.thoughtware</groupId>
+            <artifactId>thoughtware-dsm-spring-boot-starter</artifactId>
+            <version>${thoughtware-dsm.version}</version>
         </dependency>
     </dependencies>
 

@@ -33,7 +33,7 @@ DATA_HOME: ${user.home}/tiklab/${app.name}
 
 
 #eas config
-darth:
+eas:
   embbed:
     enable: true
 base:

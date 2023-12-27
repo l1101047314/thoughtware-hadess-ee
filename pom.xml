@@ -29,6 +29,7 @@
         <thoughtware-dal.version>1.0.0</thoughtware-dal.version>
         <thoughtware-join.version>1.0.0</thoughtware-join.version>
         <thoughtware-openapi-version>1.0.0-SNAPSHOT</thoughtware-openapi-version>
+        <thoughtware-dsm.version>1.0.0</thoughtware-dsm.version>
 
         <!--平台组件-->
         <thoughtware-privilege.version>1.0.1-SNAPSHOT</thoughtware-privilege.version>

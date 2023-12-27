@@ -32,10 +32,10 @@ postgresql:
     address: ${DATA_HOME}/postgresql
 
 #eas config
-darth:
+eas:
   embbed:
     enable: false
-  address: http://e.darth.thoughtware.cn
+  address: http://e.eas.thoughtware.cn
 
 DATA_HOME: /opt/tiklab/xpack_ee
 

@@ -1,7 +1,8 @@
 package io.thoughtware.hadess.starter.config;
 
-import io.thoughtware.dal.dsm.config.model.DsmConfig;
-import io.thoughtware.dal.dsm.support.DsmConfigBuilder;
+
+import io.thoughtware.dsm.config.model.DsmConfig;
+import io.thoughtware.dsm.support.DsmConfigBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -35,10 +36,6 @@ public class HadessEeSqlLoad {
                 "xprivilege_1.0.0",
         });
         dsmConfig.newVersion("1.0.1", new String[]{
-                //xpack
-                "xpack_1.0.1",
-        });
-        dsmConfig.newVersion("1.0.1", new String[]{
                 "xpack_1.0.1",
                 "oplog_1.0.1",
                 "message_1.0.1",
@@ -49,11 +46,22 @@ public class HadessEeSqlLoad {
         dsmConfig.newVersion("1.0.2", new String[]{
                 "xpack_1.0.2",
                 "message_1.0.2",
-                "oplog_1.0.2"
+                "oplog_1.0.2",
+                "todotask_1.0.2",
         });
         dsmConfig.newVersion("1.0.3", new String[]{
-                "xpack_1.0.3",
-                "message_1.0.3"
+                "message_1.0.3",
+                "oplog_1.0.3",
+        });
+        dsmConfig.newVersion("1.0.4", new String[]{
+                "message_1.0.4",
+                "oplog_1.0.4"
+        });
+        dsmConfig.newVersion("1.0.5", new String[]{
+                "message_1.0.5",
+        });
+        dsmConfig.newVersion("1.0.6", new String[]{
+                "message_1.0.6"
         });
         return dsmConfig;
     }
