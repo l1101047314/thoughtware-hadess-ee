@@ -61,7 +61,7 @@ public class QuartzListener implements ApplicationListener<ApplicationEvent> {
             if (CollectionUtils.isNotEmpty(instances)){
                 for (TimeTaskInstance taskInstance:instances){
                     try {
-                        jobManager.addJob(taskInstance.getExecObjectId(), RunJob.class,taskInstance.getCron(), HadessFinal.DEFAULT);
+                        jobManager.addJob(taskInstance, RunJob.class, HadessFinal.DEFAULT);
                     } catch (SchedulerException e) {
                         throw new ApplicationException(e);
                     }

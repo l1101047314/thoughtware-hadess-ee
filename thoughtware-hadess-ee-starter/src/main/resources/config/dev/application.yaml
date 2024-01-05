@@ -17,7 +17,7 @@ server:
 #dal config for mysql jdbc
 jdbc:
   driverClassName: org.postgresql.Driver
-  url: jdbc:postgresql://172.10.1.10:5432/tiklab_xpack_ee?currentSchema=public&stringtype=unspecified
+  url: jdbc:postgresql://172.10.1.10:5432/thoughtware_hadess_ee?currentSchema=public&stringtype=unspecified
   #url: jdbc:postgresql://172.13.1.24:5432/xpack_ee?stringtype=unspecified
   username: postgres
   password: darth2020
@@ -26,7 +26,7 @@ jdbc:
 postgresql:
   embbed:
     enable: false
-  database: tiklab_xpack_ee
+  database: thoughtware_hadess_ee
   type: local
 
 DATA_HOME: ${user.home}/tiklab/${app.name}
