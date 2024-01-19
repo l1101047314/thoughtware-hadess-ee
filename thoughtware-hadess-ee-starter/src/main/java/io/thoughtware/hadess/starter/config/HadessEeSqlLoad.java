@@ -34,6 +34,7 @@ public class HadessEeSqlLoad {
                 //xpack
                 "xpack_1.0.0",
                 "xprivilege_1.0.0",
+                "hadess_1.0.0",
         });
         dsmConfig.newVersion("1.0.1", new String[]{
                 "xpack_1.0.1",
