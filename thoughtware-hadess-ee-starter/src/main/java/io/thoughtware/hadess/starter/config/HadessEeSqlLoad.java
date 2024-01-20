@@ -62,6 +62,7 @@ public class HadessEeSqlLoad {
         });
         dsmConfig.newVersion("1.0.5", new String[]{
                 "message_1.0.5",
+                "xpack_1.0.5",
         });
         dsmConfig.newVersion("1.0.6", new String[]{
                 "message_1.0.6"
